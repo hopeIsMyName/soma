@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="with=device-width, initial-scale = 1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family= Nunito :wght@200;300;400;600;800&family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0bef0d9906.js" crossorigin="anonymous"></script>
+<body>
+<section class ="sub-header-giga">
+    <nav>
+        <a href="index.html"><img src= "images/logo.jpg"></a>
+        <div class = "nav-links" id="navLinks">
+            <i class="fa fa-times" onclick = hideMenu()></i>
+            <ul>
+                <li><a href="">About</a></li>
+                <li>
+                    <label for= "drop-1" class="toggle"></label>
+                    <a href="">Music Ensembles</a>
+                    <input type="checkbox" id="drop-1">
+                    <ul>
+                        <li><a href="jazz.html">Jazz Band</a></li>
+                        <li><a href="string.html">String Ensemble</a></li>
+                        <li><a href="wind.html">Wind Band</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for= "drop-1" class="toggle"></label>
+                    <a href="">Student Ensembles</a>
+                    <input type="checkbox" id="drop-1">
+                    <ul>
+                        <li><a href="quartet.html">String Quartet</a></li>
+                        <li><a href="pep.html">Pep Band</a></li>
+                        <li><a href="elementals.html">Elementals</a></li>
+                        <li><a href="gigabeats.html">GigaBeats</a></li>
+                        <li><a href="savaan.html">Savaan</a></li>
+                    </ul>
+                </li>
+                <li><a href="">E-Board</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick= showMenu() ></i>
+    </nav>
+    <h1><b>Contact Us!</b></h1>
+</section>
+
+
+<! ----------- contact content ---------->
+<section class="contact">
+    <div class = "wrapper">
+    <header>Send Us A Message</header>
+    <form action="#">
+        <div class = "nameInput">
+            <div class = "field">
+                <input type ="text" name="name" placeholder="Name">
+
+            </div>
+        </div>
+        <div class="dbl-field">
+            <div class = "field">
+                <input type ="text" name="phone" placeholder="Phone Number (Optional)">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class = "field">
+                <input type ="text" name="email" placeholder="Email">
+                <i class="fas fa-envelope"></i>
+            </div>
+        </div>
+        <div class = "message">
+            <textarea placeholder = "Write your Message Here" name ="message"></textarea>
+            <i class="fas fa-envelope"></i>
+        </div>
+        <div class ="button-area">
+            <button type ="submit">Send</button>
+            <span>Sending your message...</span>
+        </div>
+    </form>
+    </div>
+
+
+</section>
+
+
+
+<! ------ footer --------- >
+<section class = "footer">
+    <h4>Follow Us</h4>
+    <p>SOMA is an umbrella organization for all musical and instrumental ensembles on the NJIT campus.
+        <br> This includes both conductor led and student led organizations.
+    </p>
+    <a href="" class="contact-button">Join SOMA</a>
+    <div class="socials">
+        <i class="fa-brands fa-discord"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-youtube"></i>
+        <i class="fa-regular fa-envelope"></i>
+    </div>
+    <p>coded by hope de jesus 2022 <i class="fa-regular fa-face-smile"></i></p>
+</section>
+
+<script src="script.js">
+
+</script>
+</body>
+</html>
+
+
+
+<! ---------------JavaScript for Hamburger Toggle Menu ----------------------- !>
+
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
+

@@ -1,0 +1,1327 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.75),rgba(4,9,30,0.75)), url(images/trumpet.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 3px 12px;
+    position: relative;
+    margin: 5px;
+}
+
+.nav-links ul li ul li{
+    list-style: none;
+}
+
+.nav-links ul li ul li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #086788;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+/*this drop downs items*/
+.nav-links ul li ul li:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+
+}
+
+/*the main items*/
+.nav-links ul li:hover{
+    transition: .5s;
+}
+
+.nav-links ul li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #F5003D;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-links ul li:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav-links ul ul {
+    display: none;
+    position: absolute;
+}
+
+
+.nav-links ul ul li{
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+}
+
+
+li>a:after{
+    content: ' +';
+}
+
+
+.nav-links ul li:hover>ul{
+    display: block;
+}
+
+li>a:only-child:after{
+    content: "";
+}
+
+nav .fa{
+    display: none;
+    color: white;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+[id^=drop]{
+    display: none;
+}
+
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.text-box h1{
+    font-size: 70px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size:14px;
+}
+
+.main-button{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.main-button:hover{
+    border: 1px solid white;
+    background-color: #086788;
+    transition: .5s;
+}
+
+@media(max-width: 700px){
+     .text-box h1{
+         font-size: 40px;
+     }
+
+    .nav-links ul li{
+        display: block;
+    }
+
+
+    .nav-links{
+        position: absolute;
+        background: #086788;
+        height: 100vh;
+        width: 200px;
+        right:-200px;
+        top: 0;
+        text-align: left;
+        z-index: 2;
+        transition: .5s;
+    }
+
+    nav .fa{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+
+    [id^=drop]:checked+ul{
+        display: block;
+    }
+
+    .nav-links ul{
+        padding: 10px;
+    }
+
+    .nav-links ul ul a{
+        padding: 0px;
+    }
+
+    .nav-links ul ul{
+        float: none;
+        position: static;
+        color: white;
+    }
+
+    nav ul ul li{
+        display: block;
+        width:100%;
+    }
+
+    .nav-links ul li ul li:after {
+        background-color: white;
+        width: 90%;
+    }
+
+    .nav-links ul ul {
+        display: block;
+        position: relative;
+    }
+
+
+}
+
+/*-------- ensembles rows ----------*/
+
+.ensembles{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:active{
+    text-decoration: underline;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ensemble-col{
+    flex-basis: 31%;
+    background: #9BC1BC;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.ensemble-col:hover{
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
+}
+
+
+@media(max-width: 700px) {
+    .col{
+        flex-direction: row;
+    }
+}
+@media(max-width: 600px){
+    .ensemble-col{
+        flex-direction: row;
+    }
+    .row{
+        flex-direction: row;
+    }
+}
+
+
+
+    /* --------- Student Run ------------ */
+.student-run{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.ensemble-button{
+    display: inline-block;
+    text-decoration: none;
+    color: #F5003D;
+    border: 1px solid #F5003D;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.ensemble-button:hover{
+    border: 1px solid white;
+    background-color: #F5003D;
+    color: white;
+    transition: .5s;
+}
+
+.student-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.student-col img{
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: rgba(245, 0, 61, .7);
+}
+
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    transition: .5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+@media(max-width: 600px){
+    .row{
+        flex-direction: column; /* important */
+    }
+}
+
+
+/* -----  events -------*/
+
+.events{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.events-col{
+    flex-basis: 49%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.events-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.events-col p{
+    padding: 0;
+}
+
+.events-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+@media(max-width: 600px){
+    .events-col{
+        flex-direction: row;
+    }
+}
+
+/* ------ steps ---------*/
+
+.steps{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.steps-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #FFF1D0;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+    transition: .5s;
+}
+
+
+.steps-col img{
+    height: 60px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 25%;
+
+}
+
+.steps-col:hover{
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
+}
+
+.steps-col p{
+    padding: 0;
+}
+
+.steps-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+@media(max-width: 600px){
+    .steps-col img{
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+    .steps-col{
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+/* ---------- about -----------*/
+.contact-port{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/jazz.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+
+}
+
+.contact-port h1{
+    color: white;
+    padding: 0;
+}
+.contact-port p{
+    color: white;
+    margin-bottom: 40px;
+}
+
+@media(max-width: 600px){
+    .contact-port h1{
+        font-size: 24px;
+    }
+}
+
+
+/*----------- footer -------------*/
+
+
+.footer{
+    width:100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color: #BFD3D0;
+    color: black;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.socials .fa{
+    color: #F5003D;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.socials .fa-brands{
+    color: #F5003D;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.socials .fa-regular {
+    color: #F5003D;
+    margin: 0 13px;
+    cursor: pointer;
+}
+
+.contact-button{
+    display: inline-block;
+    text-decoration: none;
+    color: #086788;
+    border: 1px solid #086788;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.contact-button:hover{
+    border: 1px solid white;
+    background-color: #086788;
+    transition: .5s;
+    color: white;
+}
+
+
+/*  ------------------ jazz band ----------*/
+.sub-header-jazz{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.75),rgba(4,9,30,0.75)), url(images/jazz.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.sub-header-jazz h1{
+    margin-top: 40px;
+}
+
+
+.about-jazz{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-jazz h3{
+    text-align: left;
+}
+
+.jazz-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-jazz img{
+    width: 100%;
+}
+
+.about-jazz h1{
+    padding-top: 0;
+}
+
+.about-jazz p{
+    padding: 15px 0 25px;
+}
+
+
+/* ---------------- wind band ------------------ */
+.sub-header-wind{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.75),rgba(4,9,30,0.75)), url(images/wind.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.sub-header-wind h1{
+    margin-top: 40px;
+}
+
+
+.about-wind{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-wind h3{
+    text-align: left;
+}
+
+.wind-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-wind img{
+    width: 100%;
+}
+
+.about-wind h1{
+    padding-top: 0;
+}
+
+.about-wind p{
+    padding: 15px 0 25px;
+}
+
+/*---------------- string ensemble --------------*/
+.sub-header-string{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.75),rgba(4,9,30,0.75)), url(images/stockstrings.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.sub-header-string h1{
+    margin-top: 40px;
+}
+.about-string{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-string h3{
+    text-align: left;
+}
+
+.string-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-string img{
+    width: 100%;
+}
+
+.about-string h1{
+    padding-top: 0;
+}
+
+.about-string p{
+    padding: 15px 0 25px;
+}
+
+/*---------------- pep band --------------*/
+.sub-header-pep{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.75),rgba(4,9,30,0.75)), url(images/pephorns.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.sub-header-pep h1{
+    margin-top: 40px;
+}
+.about-pep{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-pep h3{
+    text-align: left;
+}
+
+.pep-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-pep img{
+    width: 100%;
+}
+
+.about-pep h1{
+    padding-top: 0;
+}
+
+.about-pep p{
+    padding: 15px 0 25px;
+}
+
+/*---------------- quartet band --------------*/
+.sub-header-quartet{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.75),rgba(4,9,30,0.75)), url(images/cellos.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.sub-header-quartet h1{
+    margin-top: 40px;
+}
+.about-quartet{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-quartet h3{
+    text-align: left;
+}
+
+.quartet-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-quartet img{
+    width: 100%;
+}
+
+.about-quartet h1{
+    padding-top: 0;
+}
+
+.about-quartet p{
+    padding: 15px 0 25px;
+}
+
+/*---------------- elementals --------------*/
+
+.sub-header-elementals{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.75),rgba(4,9,30,0.75)), url(images/vibin.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.sub-header-elementals h1{
+    margin-top: 40px;
+}
+.about-elementals{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-elementals h3{
+    text-align: left;
+}
+
+.elementals-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-elementals img{
+    width: 100%;
+}
+
+.about-elementals h1{
+    padding-top: 0;
+}
+
+.about-elementals p{
+    padding: 15px 0 25px;
+}
+
+
+/*---------------- savaan --------------*/
+
+.sub-header-savaan{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.75),rgba(4,9,30,0.75)), url(images/groupsing.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.sub-header-savaan h1{
+    margin-top: 40px;
+}
+.about-savaan{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-savaan h3{
+    text-align: left;
+}
+
+.savaan-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-savaan img{
+    width: 100%;
+}
+
+.about-savaan h1{
+    padding-top: 0;
+}
+
+.about-savaan p{
+    padding: 15px 0 25px;
+}
+
+/*---------------- gigabeats --------------*/
+
+.sub-header-giga{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.75),rgba(4,9,30,0.75)), url(images/mic.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.sub-header-giga h1{
+    margin-top: 40px;
+}
+.about-giga{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-giga h3{
+    text-align: left;
+}
+
+.giga-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-giga img{
+    width: 100%;
+}
+
+.about-giga h1{
+    padding-top: 0;
+}
+
+.about-giga p{
+    padding: 15px 0 25px;
+}
+
+/*---------------- eboard --------------*/
+
+.sub-header-eboard{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.75),rgba(4,9,30,0.75)), url(images/eboard.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.sub-header-eboard h1{
+    margin-top: 40px;
+}
+
+.members{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.members-col{
+    flex-basis: 24%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.members-col img{
+    width: 100%;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.members-col p{
+    padding: 0;
+}
+
+.mem-row{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0px;
+    margin-top: 5%;
+}
+
+.members-col h3{
+    text-align: left;
+    background-color: black;
+}
+
+
+.mem-layer{
+    background: transparent;
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.mem-layer:hover{
+    background: rgba(245, 0, 61, .7);
+}
+
+.mem-layer h3{
+    width: 90%;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    left: 60%;
+    transform: translateX(-50%);
+    position: absolute;
+    transition: .4s;
+}
+
+.mem-layer:hover h3{
+    bottom: 70%;
+    opacity: 1;
+}
+
+.mem-layer p{
+    display: none;
+    width: 90%;
+    font-weight: 100;
+    color: white;
+    font-size: 15px;
+    bottom: 0;
+    left: 51%;
+    transform: translateX(-53%);
+    position: absolute;
+    text-align: right;
+}
+
+.mem-layer:hover p{
+    top: 30%;
+    opacity: 1;
+    display: inherit;
+}
+
+.description{
+    text-align: right;
+}
+
+.description h3{
+    background-color: transparent;
+    text-align: right;
+    margin: 0px;
+}
+
+.description p{
+    border: 0px;
+}
+.member-labels-col h3{
+    background-color: transparent;
+    float: left;
+}
+
+@media(max-width: 800px){
+    .mem-row{
+        flex-direction: column;
+    }
+
+
+    .mem-layer:hover h3{
+        display: block;
+    }
+
+}
+
+
+
+/* ========= student ensembles page ==============*/
+
+/* ----- Music ----- */
+.sub-header-musicEnsem{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.75),rgba(4,9,30,0.75)), url(images/sheet.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.titleDes{
+    padding-bottom: 150px;
+}
+
+.center { text-align: center; }
+
+.container {
+    width: 95%;
+    max-width: 1220px;
+    margin: 0 auto;
+    color: black;
+}
+
+.episode {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+
+
+.episode__number {
+    font-size: 5vw;
+    font-weight: 600;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    height: calc(10vw + 20px);
+    transition: all 0.2s ease-in;
+    text-align: left;
+}
+
+.episode__content {
+    border-top: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 10px;
+    padding: 30px 0;
+}
+
+.picEnsem{
+    padding-top: 50px;
+    max-width: 100%;
+    height: auto;
+
+}
+
+.episode__content .timeAndLoc {
+    font-weight: 600
+}
+
+.episode__content .story {
+    line-height: 26px;
+}
+
+@media (max-width: 600px) {
+    .episode {
+        display: inline-block;
+    }
+
+    .picEnsem{
+        display: none;
+    }
+    .timeAndLoc{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .episode__content .story {
+        font-size: 15px;
+    }
+}
+
+
+/* ------- student ------ */
+.sub-header-studentEnsem{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.75),rgba(4,9,30,0.75)), url(images/sheet.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+/* -------------- contact info -------------*/
+
+.contact{
+    display: flex;
+    padding: 0 10px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #086788;
+}
+
+.wrapper{
+    width:720px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.wrapper header{
+    font-size: 22px;
+    font-weight: 600;
+    padding: 20px 30px;
+    border-bottom: 1px solid pink;
+
+}
+
+.wrapper form{
+    margin: 35px 30px;
+}
+
+form .nameInput,
+form .dbl-field{
+     display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    justify-content: space-between;
+}
+
+.dbl-field .field{
+    height: 50px;
+    position: relative;
+    width: calc(100% / 2 - 13px);
+}
+
+ .nameInput .field{
+     height:50px;
+     width: 100%;
+}
+
+form .field input,
+form .message textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 18px 0 48px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+form .field input:focus,
+form .message textarea:focus{
+    border: 2px solid #086788;
+}
+
+.wrapper .field i{
+    position: absolute;
+    xleft: 18px;
+    xtop: 50%;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    color: lightgrey;
+}
+/* doesn't work lol. change the icon
+form .field input:focus ~ i{
+    color: #086788;
+}
+
+*/
+
+/* I give up. Trying to put little icon next to 'Name'
+.wrapper .nameInput .field i{
+    position: absolute;
+    color: hotpink;
+    right: 380px;
+    transform: translateY(-50%);
+
+}
+*/
+
+.wrapper .dbl-field .field i{
+    color: lightgrey;
+    left: 18px;
+    top: 50%;
+}
+form .field input::placeholder,
+form .message textarea::placeholder{
+    color: lightgrey;
+}
+
+.wrapper form i{
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    xcolor: lightgrey;
+}
+
+form .message{
+    position: relative;
+}
+
+form .message i{
+    top: 30px;
+    font-size: 20px;
+    color: lightgrey;
+}
+
+form .message textarea{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 120px;
+    max-height: 300px;
+    padding: 15px 20px 0 48px;
+}
+
+form .button-area{
+    margin: 25px 0;
+}
+
+.button-area button{
+    font-size: 18px;
+    padding: 13px 25px;
+    background-color: #F5003D;
+    cursor: pointer;
+    border: #F5003D;
+    padding: 12px 25px;
+    color: white;
+}
+
+
+.button-area span{
+    color: #9BC1BC;
+    margin-left: 30px;
+    display: none;
+}
+
+
+@media(max-width: 600px){
+    .wrapper header{
+        text-align: center;
+    }
+
+    form .dbl-field{
+        margin-bottom: 0px;
+        flex-direction: column;
+    }
+
+    .dbl-field .field{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .button-area button{
+        width: 100%;
+    }
+
+    form .message textarea{
+        resize: none;
+    }
+
+    form .button-area{
+        flex-direction: column;
+    }
+
+    .button-area span{
+        text-align: center;
+        margin: 20px 0;
+    }
+
+}
