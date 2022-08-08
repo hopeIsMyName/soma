@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content="with=device-width, initial-scale = 1.0">
+        <title>SOMA</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family= Nunito :wght@200;300;400;600;800&family=Raleway&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/0bef0d9906.js" crossorigin="anonymous"></script>
+    <body>
+        <section class ="header">
+            <nav>
+                <a href="index.html"><img src= "images/logo.jpg"></a>
+
+                <div class = "nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick = hideMenu()></i>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li>
+                            <label for= "drop-1" class="toggle"></label>
+                            <a href="musicEnsem.html">Music Ensembles</a>
+                            <input type="checkbox" id="drop-1">
+                            <ul>
+                                <li><a href="jazz.html">Jazz Band</a></li>
+                                <li><a href="string.html">String Ensemble</a></li>
+                                <li><a href="wind.html">Wind Band</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label for= "drop-1" class="toggle"></label>
+                            <a href="studentEnsem.html">Student Ensembles</a>
+                            <input type="checkbox" id="drop-1">
+                            <ul>
+                                <li><a href="quartet.html">String Quartet</a></li>
+                                <li><a href="pep.html">Pep Band</a></li>
+                                <li><a href="elementals.html">Elementals</a></li>
+                                <li><a href="gigabeats.html">GigaBeats</a></li>
+                                <li><a href="savaan.html">Savaan</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="eboard.html">E-Board</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick= showMenu() ></i>
+            </nav>
+
+            <div class = "text-box">
+                <h1><b>Society of Musical Arts</b></h1>
+                <p>INSERT MISSION STATEMENT HERE.<br> PLEASE CHANGE THIS OH MY GOSH</p>
+            </div>
+
+        </section>
+
+        <section class ="ensembles">
+            <h1><em>Musical Ensembles</em></h1>
+            <p>The following three ensembles perform a final concert at the end of each semester. <br> Long term dedication and attendance can qualify for college credit.</p>
+            <div class="row">
+                <div class ="ensemble-col">
+                    <a href ="wind.html">
+                        <h3>Wind Band</h3>
+                        <p> Wednesdays | 4:00pm-6:00pm <br><br></r><i>Conducted by Mr. Nick Santoro, the wind band
+                            provides an opportunity for former band nerds to exercise
+                            their craft and meet other wind band musicians on campus.</i>
+                        </p>
+                    </a>
+                </div>
+                <div class ="ensemble-col">
+                    <a href = "string.html">
+                        <h3>String Ensemble</h3>
+                        <p> Tuesdays and Thursdays <br><br><i>Mr. Christine Sweet leads the string ensemble
+                            where students play pieces from a variety of time periods, including pieces
+                            composed by students in the ensemble themselves.</i>
+                        </p>
+                    </a>
+                </div>
+                <div class ="ensemble-col">
+                    <a href = "jazz.html">
+                        <h3>Jazz Band</h3>
+                        <p> Tuesdays | 7:00pm-9:00pm <br><br><i>Lead by Mr. Dave Remelis, the jazz band
+                            plays through funk, bepop, modern, blues, and more. All instruments and musicians
+                            of any skill set are welcome.</i>
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <! ------- carousel  ----------------!>
+
+        <! ------- student run organization ---------- !>
+        <section class="student-run">
+            <h1>Student Run Organizations</h1>
+            <p>musical ensembles that are for students, lead by students</p>
+            <a href="" class="ensemble-button">Click for more Ensembles</a>
+            <div class ="row">
+                <div class="student-col">
+                    <a href="pep.html">
+                        <img src="images/andrew.jpg">
+                        <div class="layer">
+                            <h3>PEP BAND</h3>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="student-col">
+                    <a href = "elementals.html">
+                        <img src="images/drums.jpg">
+                        <div class="layer">
+                            <h3>ELEMENTALS</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="student-col">
+                    <a href = "quartet.html">
+                        <img src="images/tatay.jpg">
+                        <div class="layer">
+                            <h3>STRING QUARTET</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <! ------- events for  SOMA ---------->
+        <section class="events">
+            <h1>SOMA Events</h1>
+            <p>When we're not studying and not practicing, SOMA members come together to run social musical events. <br>
+            From our open mics to our game nights, SOMA events allow students to meet other musicians. All are always welcome.</p>
+
+            <div class="row">
+                <div class="events-col">
+                    <img src="images/fireside.jpg">
+                    <h3>Campfire Song Session</h3>
+                    <p>Last semester, we held a night of singing and s'mores.
+                        SOMA members played their guitars and djembes along to classic campfire songs.</p>
+                </div>
+                <div class="events-col">
+                    <img src="images/singing.jpg">
+                    <h3>Open Mic Nights</h3>
+                    <p>At least once a month, SOMA hosts open mic night at the NJIT pub.
+                        Students of all talents are welcome to perform.</p>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="events-col">
+                    <img src="images/picnic.jpg">
+                    <h3>Picnic on the Parking Deck</h3>
+                    <p>To celebrate the new school year, the e-board hosted a potluck parking deck picnic on the top floor of the Laurel parking deck.</p>
+                </div>
+                <div class="events-col">
+                    <img src="images/chinatown.jpg">
+                    <h3>Brooklyn Trip</h3>
+                    <p>Student run band Elementals traveled to a barcade in Brooklyn to listen and perform with a video game cover band.</p>
+                </div>
+            </div>
+        </section>
+
+        <! ------- steps to join ------------ >
+        <section class="steps">
+            <h1>Joining SOMA is as easy as 1,2,3!</h1>
+            <p>Three steps to joining SOMA and officially have access to resources<br> such as instruments to rent, practice rooms, and communication with other musicians</p>
+
+            <div class ="steps-col">
+
+                <img src ="images/njit.jpg">
+                <div>
+                    <h3>1) Join on Highlander Hub</h3>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+            </div>
+            <div class ="steps-col">
+                <img src ="images/discord.jpg">
+                <div>
+                    <h3>2) Join on Discord</h3>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                </div>
+            </div>
+            <div class ="steps-col">
+                <img src ="images/forum.jpg">
+                <div>
+                    <h3>3) Fill out the Google Forum</h3>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+    <! ------ About soma --------- >
+    <section class = "contact-port">
+        <h1>Tell us about yourself!</h1>
+        <p>If you have questions, ask us! We'd love to hear from you.</p>
+        <a href="" class="main-button">CONTACT US</a>
+    </section>
+
+
+    <! ------ footer --------- >
+    <section class = "footer">
+        <h4>Follow Us</h4>
+        <p>SOMA is an umbrella organization for all musical and instrumental ensembles on the NJIT campus.
+            <br> This includes both conductor led and student led organizations.
+        </p>
+        <a href="" class="contact-button">Join SOMA</a>
+        <div class="socials">
+            <i class="fa-brands fa-discord"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-youtube"></i>
+            <i class="fa-regular fa-envelope"></i>
+        </div>
+        <p>coded by hope de jesus 2022 <i class="fa-regular fa-face-smile"></i></p>
+    </section>
+
+    </body>
+
+
+    <! ---------------JavaScript for Hamburger Toggle Menu ----------------------- !>
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</html>
+
+
+

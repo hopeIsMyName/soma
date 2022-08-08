@@ -1054,7 +1054,7 @@ h3{
     color: white;
 }
 
-.titleDes{
+.titleDesc{
     padding-bottom: 150px;
 }
 
@@ -1150,20 +1150,21 @@ h3{
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: #086788;
 }
 
 .wrapper{
+    border-style: solid ;
+    border-color: #086788;
     width:720px;
-    background-color: white;
-    border-radius: 5px;
+    background-color: #e4f0f5;
+    border-radius: 10px;
 }
 
 .wrapper header{
     font-size: 22px;
     font-weight: 600;
     padding: 20px 30px;
-    border-bottom: 1px solid pink;
+    border-bottom: 1px solid #086788;
 
 }
 
@@ -1324,4 +1325,18 @@ form .button-area{
         margin: 20px 0;
     }
 
+}
+
+
+/* ------------- about us page ------------ */
+
+
+.sub-header-about{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.75),rgba(4,9,30,0.75)), url(images/building.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
 }

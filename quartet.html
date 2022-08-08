@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name = "viewport" content="with=device-width, initial-scale = 1.0">
+  <title>String Quartet</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family= Nunito :wght@200;300;400;600;800&family=Raleway&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/0bef0d9906.js" crossorigin="anonymous"></script>
+<body>
+<section class ="sub-header-quartet">
+  <nav>
+    <a href="index.html"><img src= "images/logo.jpg"></a>
+
+    <div class = "nav-links" id="navLinks">
+      <i class="fa fa-times" onclick = hideMenu()></i>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <label for= "drop-1" class="toggle"></label>
+          <a href="musicEnsem.html">Music Ensembles</a>
+          <input type="checkbox" id="drop-1">
+          <ul>
+            <li><a href="jazz.html">Jazz Band</a></li>
+            <li><a href="string.html">String Ensemble</a></li>
+            <li><a href="wind.html">Wind Band</a></li>
+          </ul>
+        </li>
+        <li>
+          <label for= "drop-1" class="toggle"></label>
+          <a href="studentEnsem.html">Student Ensembles</a>
+          <input type="checkbox" id="drop-1">
+          <ul>
+            <li><a href="quartet.html">String Quartet</a></li>
+            <li><a href="pep.html">Pep Band</a></li>
+            <li><a href="elementals.html">Elementals</a></li>
+            <li><a href="gigabeats.html">GigaBeats</a></li>
+            <li><a href="savaan.html">Savaan</a></li>
+          </ul>
+        </li>
+        <li><a href="eboard.html">E-Board</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <i class="fa fa-bars" onclick= showMenu() ></i>
+  </nav>
+  <h1><b>String Quartet</b></h1>
+</section>
+
+
+<! ----------- quartet content ---------->
+<section class="about-quartet">
+  <div class = "row">
+    <div class="quartet-col">
+      <h1>String Ensemble</h1>
+      <h3>More Information To Come</h3>
+      <p>Info to come later. Please return another time for more information
+        <br><br><br>
+
+        Want to learn more?
+      </p>
+      <a href="" class="ensemble-button">Email Us!</a>
+    </div>
+    <div class="quartet-col">
+      <img src="images/violas.jpg">
+    </div>
+  </div>
+
+</section>
+
+
+
+<! ------ footer --------- >
+<section class = "footer">
+  <h4>Follow Us</h4>
+  <p>SOMA is an umbrella organization for all musical and instrumental ensembles on the NJIT campus.
+    <br> This includes both conductor led and student led organizations.
+  </p>
+  <a href="" class="contact-button">Join SOMA</a>
+  <div class="socials">
+    <i class="fa-brands fa-discord"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-youtube"></i>
+    <i class="fa-regular fa-envelope"></i>
+  </div>
+  <p>coded by hope de jesus 2022 <i class="fa-regular fa-face-smile"></i></p>
+</section>
+
+</body>
+</html>
+
+
+
+<! ---------------JavaScript for Hamburger Toggle Menu ----------------------- !>
+
+
+<script>
+  var navLinks = document.getElementById("navLinks");
+  function showMenu(){
+    navLinks.style.right = "0";
+  }
+  function hideMenu(){
+    navLinks.style.right = "-200px";
+  }
+</script>
+
